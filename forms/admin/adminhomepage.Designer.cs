@@ -115,6 +115,7 @@
             this.txtMobile = new System.Windows.Forms.TextBox();
             this.txtEmpName = new System.Windows.Forms.TextBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lblTotalAmountDateToDate = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.tabctrlAdminHome.SuspendLayout();
             this.tabAdd.SuspendLayout();
@@ -696,6 +697,7 @@
             // 
             // subtabDateToDate
             // 
+            this.subtabDateToDate.Controls.Add(this.lblTotalAmountDateToDate);
             this.subtabDateToDate.Controls.Add(this.lblTo);
             this.subtabDateToDate.Controls.Add(this.lblFrom);
             this.subtabDateToDate.Controls.Add(this.dtpTo);
@@ -752,6 +754,7 @@
             this.btnViewReportDateToDate.TabIndex = 3;
             this.btnViewReportDateToDate.Text = "Search";
             this.btnViewReportDateToDate.UseVisualStyleBackColor = true;
+            this.btnViewReportDateToDate.Click += new System.EventHandler(this.btnViewReportDateToDate_Click);
             // 
             // dgvSalesReportDateToDate
             // 
@@ -837,6 +840,7 @@
             this.btnAddEmployee.TabIndex = 14;
             this.btnAddEmployee.Text = "ADD";
             this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // lblHint
             // 
@@ -958,6 +962,14 @@
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Size = new System.Drawing.Size(139, 26);
             this.txtEmpName.TabIndex = 0;
+            // 
+            // lblTotalAmountDateToDate
+            // 
+            this.lblTotalAmountDateToDate.AutoSize = true;
+            this.lblTotalAmountDateToDate.Location = new System.Drawing.Point(273, 308);
+            this.lblTotalAmountDateToDate.Name = "lblTotalAmountDateToDate";
+            this.lblTotalAmountDateToDate.Size = new System.Drawing.Size(0, 20);
+            this.lblTotalAmountDateToDate.TabIndex = 8;
             // 
             // frmAdminHomepage
             // 
@@ -1085,6 +1097,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colIMEINODateToDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPriceDateToDate;
         private System.Windows.Forms.DateTimePicker dtpWarranty;
+        private System.Windows.Forms.Label lblTotalAmountDateToDate;
     }
 }
 

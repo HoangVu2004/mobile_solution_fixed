@@ -400,7 +400,7 @@ namespace SHOPPE
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                dgvSalesRange.DataSource = dt;
+                dgvSalesReportDateToDate.DataSource = dt;
 
                 // Tính tổng doanh thu
                 decimal totalSales = 0;
@@ -412,11 +412,94 @@ namespace SHOPPE
                     }
                 }
 
-                lblTotalAmountRange.Text = $"Tổng doanh thu từ {startDate:dd/MM/yyyy} đến {endDate:dd/MM/yyyy} là: {totalSales:N0} VNĐ";
+                lblTotalAmountDateToDate.Text = $"Tổng doanh thu từ {startDate:dd/MM/yyyy} đến {endDate:dd/MM/yyyy} là: {totalSales:N0} VNĐ";
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi hiển thị báo cáo khoảng ngày: " + ex.Message);
+            }
+        }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string empName = txtEmpName.Text.Trim();
+                string address = txtAddress.Text.Trim();
+                string mobile = txtMobile.Text.Trim();
+                string userName = txtUsername.Text.Trim();
+                string password = txtPassword.Text;
+                string retypePassword = txtConfirmPassword.Text;
+                string hint = txtHint.Text.Trim();
+
+                // Kiểm tra dữ liệu rỗng
+                if (string.IsNullOrEmpty(empName) || string.IsNullOrEmpty(userName) ||
+                    string.IsNullOrEmpty(password) || string.IsNullOrEmpty(retypePassword))
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ các trường bắt buộc.");
+                    return;
+                }
+
+                // Kiểm tra mật khẩu khớp nhau
+                if (password != retypePassword)
+                {
+                    MessageBox.Show("Mật khẩu và Nhập lại mật khẩu không khớp.");
+                    return;
+                }
+
+                // Kiểm tra độ dài password
+                if (password.Length < 5)
+                {
+                    MessageBox.Show("Mật khẩu phải có ít nhất 5 ký tự.");
+                    return;
+                }
+
+                // Kiểm tra trùng username
+                string checkUserQuery = "SELECT COUNT(*) FROM tbl_User WHERE UserName = @username";
+                cmd = new SqlCommand(checkUserQuery, conn);
+                cmd.Parameters.AddWithValue("@username", userName);
+                conn.Open();
+                int userExists = (int)cmd.ExecuteScalar();
+                conn.Close();
+
+                if (userExists > 0)
+                {
+                    MessageBox.Show("Tên đăng nhập đã tồn tại. Vui lòng chọn tên khác.");
+                    return;
+                }
+
+                // Thêm vào cơ sở dữ liệu
+                string insertQuery = @"
+            INSERT INTO tbl_User (UserName, PWD, EmployeeName, Address, MobileNumber, Hint)
+            VALUES (@username, @password, @empName, @address, @mobile, @hint)";
+
+                cmd = new SqlCommand(insertQuery, conn);
+                cmd.Parameters.AddWithValue("@username", userName);
+                cmd.Parameters.AddWithValue("@password", password); // Lưu ý: Chưa mã hoá
+                cmd.Parameters.AddWithValue("@empName", empName);
+                cmd.Parameters.AddWithValue("@address", address);
+                cmd.Parameters.AddWithValue("@mobile", mobile);
+                cmd.Parameters.AddWithValue("@hint", hint);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                MessageBox.Show("Thêm nhân viên thành công!");
+
+                // Xoá dữ liệu sau khi thêm
+                txtEmpName.Clear();
+                txtAddress.Clear();
+                txtMobile.Clear();
+                txtUsername.Clear();
+                txtPassword.Clear();
+                txtConfirmPassword.Clear();
+                txtHint.Clear();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                MessageBox.Show("Lỗi khi thêm nhân viên: " + ex.Message);
             }
         }
 
