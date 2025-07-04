@@ -71,6 +71,12 @@
     <Compile Include="forms\common\forgotpassword.Designer.cs">
       <DependentUpon>forgotpassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\common\Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\common\Member.Designer.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\user\userhomepage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\common\forgotpassword.resx">
       <DependentUpon>forgotpassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\common\Member.resx">
+      <DependentUpon>Member.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\user\userhomepage.resx">
       <DependentUpon>userhomepage.cs</DependentUpon>
