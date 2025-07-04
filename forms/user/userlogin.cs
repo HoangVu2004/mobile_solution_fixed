@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SHOPPE
 {
     public partial class userlogin : Form
@@ -39,7 +40,9 @@ namespace SHOPPE
 
         private void lnkAdminlogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmAdminLogin objLogin = new frmAdminLogin();
+            objLogin.Show();
+            this.Hide();
         }
     }
 }

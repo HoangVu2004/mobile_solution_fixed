@@ -16,7 +16,7 @@ namespace SHOPPE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new userlogin());
+            Application.Run(new frmAdminHomepage());
         }
     }
 }

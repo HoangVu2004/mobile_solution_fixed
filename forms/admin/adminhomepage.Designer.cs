@@ -1,4 +1,4 @@
-﻿namespace AdminHomepage
+﻿namespace SHOPPE
 {
     partial class frmAdminHomepage
     {
@@ -46,18 +46,18 @@
             this.lblModelName = new System.Windows.Forms.Label();
             this.lblCompanyForModel = new System.Windows.Forms.Label();
             this.lblModelID = new System.Windows.Forms.Label();
-            this.txtModelName = new System.Windows.Forms.TextBox();
+            this.txtModelNum = new System.Windows.Forms.TextBox();
             this.txtModelID = new System.Windows.Forms.TextBox();
             this.btnAddModel = new System.Windows.Forms.Button();
             this.subtabMobile = new System.Windows.Forms.TabPage();
-            this.txtWarranty = new System.Windows.Forms.TextBox();
+            this.dtpWarranty = new System.Windows.Forms.DateTimePicker();
             this.btnAddMobile = new System.Windows.Forms.Button();
             this.lblWarranty = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblIMEI = new System.Windows.Forms.Label();
             this.lblMobileNumber = new System.Windows.Forms.Label();
             this.lblCompanyMobile = new System.Windows.Forms.Label();
-            this.txtMobilePrice = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtIMEI = new System.Windows.Forms.TextBox();
             this.cmbModelMobile = new System.Windows.Forms.ComboBox();
             this.cmbCompanyMobile = new System.Windows.Forms.ComboBox();
@@ -214,6 +214,7 @@
             this.btnAddCompany.TabIndex = 9;
             this.btnAddCompany.Text = "ADD";
             this.btnAddCompany.UseVisualStyleBackColor = true;
+            this.btnAddCompany.Click += new System.EventHandler(this.btnAddCompany_Click);
             // 
             // lblCompanyName
             // 
@@ -255,7 +256,7 @@
             this.subtabModel.Controls.Add(this.lblModelName);
             this.subtabModel.Controls.Add(this.lblCompanyForModel);
             this.subtabModel.Controls.Add(this.lblModelID);
-            this.subtabModel.Controls.Add(this.txtModelName);
+            this.subtabModel.Controls.Add(this.txtModelNum);
             this.subtabModel.Controls.Add(this.txtModelID);
             this.subtabModel.Controls.Add(this.btnAddModel);
             this.subtabModel.Location = new System.Drawing.Point(4, 29);
@@ -304,12 +305,12 @@
             this.lblModelID.TabIndex = 3;
             this.lblModelID.Text = "Model ID:";
             // 
-            // txtModelName
+            // txtModelNum
             // 
-            this.txtModelName.Location = new System.Drawing.Point(242, 147);
-            this.txtModelName.Name = "txtModelName";
-            this.txtModelName.Size = new System.Drawing.Size(121, 26);
-            this.txtModelName.TabIndex = 2;
+            this.txtModelNum.Location = new System.Drawing.Point(242, 147);
+            this.txtModelNum.Name = "txtModelNum";
+            this.txtModelNum.Size = new System.Drawing.Size(121, 26);
+            this.txtModelNum.TabIndex = 2;
             // 
             // txtModelID
             // 
@@ -327,17 +328,18 @@
             this.btnAddModel.TabIndex = 0;
             this.btnAddModel.Text = "ADD";
             this.btnAddModel.UseVisualStyleBackColor = true;
+            this.btnAddModel.Click += new System.EventHandler(this.btnAddModel_Click);
             // 
             // subtabMobile
             // 
-            this.subtabMobile.Controls.Add(this.txtWarranty);
+            this.subtabMobile.Controls.Add(this.dtpWarranty);
             this.subtabMobile.Controls.Add(this.btnAddMobile);
             this.subtabMobile.Controls.Add(this.lblWarranty);
             this.subtabMobile.Controls.Add(this.lblPrice);
             this.subtabMobile.Controls.Add(this.lblIMEI);
             this.subtabMobile.Controls.Add(this.lblMobileNumber);
             this.subtabMobile.Controls.Add(this.lblCompanyMobile);
-            this.subtabMobile.Controls.Add(this.txtMobilePrice);
+            this.subtabMobile.Controls.Add(this.txtPrice);
             this.subtabMobile.Controls.Add(this.txtIMEI);
             this.subtabMobile.Controls.Add(this.cmbModelMobile);
             this.subtabMobile.Controls.Add(this.cmbCompanyMobile);
@@ -349,12 +351,12 @@
             this.subtabMobile.Text = "Mobile";
             this.subtabMobile.UseVisualStyleBackColor = true;
             // 
-            // txtWarranty
+            // dtpWarranty
             // 
-            this.txtWarranty.Location = new System.Drawing.Point(212, 270);
-            this.txtWarranty.Name = "txtWarranty";
-            this.txtWarranty.Size = new System.Drawing.Size(132, 26);
-            this.txtWarranty.TabIndex = 11;
+            this.dtpWarranty.Location = new System.Drawing.Point(212, 270);
+            this.dtpWarranty.Name = "dtpWarranty";
+            this.dtpWarranty.Size = new System.Drawing.Size(200, 26);
+            this.dtpWarranty.TabIndex = 11;
             // 
             // btnAddMobile
             // 
@@ -365,6 +367,7 @@
             this.btnAddMobile.TabIndex = 10;
             this.btnAddMobile.Text = "ADD";
             this.btnAddMobile.UseVisualStyleBackColor = true;
+            this.btnAddMobile.Click += new System.EventHandler(this.btnAddMobile_Click);
             // 
             // lblWarranty
             // 
@@ -416,12 +419,12 @@
             this.lblCompanyMobile.TabIndex = 5;
             this.lblCompanyMobile.Text = "Company Name";
             // 
-            // txtMobilePrice
+            // txtPrice
             // 
-            this.txtMobilePrice.Location = new System.Drawing.Point(212, 221);
-            this.txtMobilePrice.Name = "txtMobilePrice";
-            this.txtMobilePrice.Size = new System.Drawing.Size(132, 26);
-            this.txtMobilePrice.TabIndex = 4;
+            this.txtPrice.Location = new System.Drawing.Point(212, 221);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(132, 26);
+            this.txtPrice.TabIndex = 4;
             // 
             // txtIMEI
             // 
@@ -445,6 +448,7 @@
             this.cmbCompanyMobile.Name = "cmbCompanyMobile";
             this.cmbCompanyMobile.Size = new System.Drawing.Size(158, 28);
             this.cmbCompanyMobile.TabIndex = 0;
+            this.cmbCompanyMobile.SelectedIndexChanged += new System.EventHandler(this.cmbCompanyMobile_SelectedIndexChanged);
             // 
             // tabUpdateStock
             // 
@@ -563,6 +567,7 @@
             this.btnUpdateStock.TabIndex = 0;
             this.btnUpdateStock.Text = "UPDATE";
             this.btnUpdateStock.UseVisualStyleBackColor = true;
+            this.btnUpdateStock.Click += new System.EventHandler(this.btnUpdateStock_Click);
             // 
             // tabSaleReport
             // 
@@ -616,6 +621,7 @@
             this.btnViewReportDay.TabIndex = 3;
             this.btnViewReportDay.Text = "Search";
             this.btnViewReportDay.UseVisualStyleBackColor = true;
+            this.btnViewReportDay.Click += new System.EventHandler(this.btnViewReportDay_Click);
             // 
             // lblSelectDate
             // 
@@ -686,6 +692,7 @@
             this.dtpDate.Size = new System.Drawing.Size(200, 26);
             this.dtpDate.TabIndex = 0;
             this.dtpDate.Value = new System.DateTime(2025, 6, 27, 19, 14, 3, 0);
+            this.dtpDate.ValueChanged += new System.EventHandler(this.btnViewReportDay_Click);
             // 
             // subtabDateToDate
             // 
@@ -1017,7 +1024,7 @@
         private System.Windows.Forms.Label lblModelName;
         private System.Windows.Forms.Label lblCompanyForModel;
         private System.Windows.Forms.Label lblModelID;
-        private System.Windows.Forms.TextBox txtModelName;
+        private System.Windows.Forms.TextBox txtModelNum;
         private System.Windows.Forms.TextBox txtModelID;
         private System.Windows.Forms.Button btnAddModel;
         private System.Windows.Forms.Button btnAddMobile;
@@ -1026,7 +1033,7 @@
         private System.Windows.Forms.Label lblIMEI;
         private System.Windows.Forms.Label lblMobileNumber;
         private System.Windows.Forms.Label lblCompanyMobile;
-        private System.Windows.Forms.TextBox txtMobilePrice;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtIMEI;
         private System.Windows.Forms.ComboBox cmbModelMobile;
         private System.Windows.Forms.ComboBox cmbCompanyMobile;
@@ -1041,7 +1048,6 @@
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.TextBox txtTransID;
         private System.Windows.Forms.Button btnUpdateStock;
-        private System.Windows.Forms.TextBox txtWarranty;
         private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.Label lblHint;
         private System.Windows.Forms.Label lblConfirmPassword;
@@ -1078,6 +1084,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colModelNumDateToDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIMEINODateToDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPriceDateToDate;
+        private System.Windows.Forms.DateTimePicker dtpWarranty;
     }
 }
 

@@ -1,4 +1,4 @@
-﻿namespace AdminLogin
+﻿namespace SHOPPE
 {
     partial class frmAdminLogin
     {
@@ -50,6 +50,7 @@
             this.lnkBackToUserLogin.TabIndex = 0;
             this.lnkBackToUserLogin.TabStop = true;
             this.lnkBackToUserLogin.Text = "Back";
+            this.lnkBackToUserLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkBackToUserLogin_LinkClicked);
             // 
             // lblAdminUser
             // 
@@ -95,6 +96,7 @@
             this.btnAdminLogin.TabIndex = 5;
             this.btnAdminLogin.Text = "Login";
             this.btnAdminLogin.UseVisualStyleBackColor = true;
+            this.btnAdminLogin.Click += new System.EventHandler(this.btnAdminLogin_Click);
             // 
             // lnkForgotPassword
             // 
@@ -111,9 +113,11 @@
             // lblAdminMsg
             // 
             this.lblAdminMsg.AutoSize = true;
+            this.lblAdminMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminMsg.ForeColor = System.Drawing.Color.Red;
             this.lblAdminMsg.Location = new System.Drawing.Point(200, 332);
             this.lblAdminMsg.Name = "lblAdminMsg";
-            this.lblAdminMsg.Size = new System.Drawing.Size(0, 20);
+            this.lblAdminMsg.Size = new System.Drawing.Size(0, 29);
             this.lblAdminMsg.TabIndex = 7;
             // 
             // frmAdminLogin
