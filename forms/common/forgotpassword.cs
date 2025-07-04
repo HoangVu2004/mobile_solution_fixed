@@ -16,5 +16,12 @@ namespace SHOPPE
         {
             InitializeComponent();
         }
+
+        private void lnkLoginPage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            userlogin objLogin = new userlogin();
+            objLogin.Show();
+            this.Hide();
+        }
     }
 }

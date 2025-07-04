@@ -38,5 +38,12 @@ namespace SHOPPE
                 lblAdminMsg.Text = "User is not valid";
             }
         }
+
+        private void lnkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forgotpassword objLogin = new forgotpassword();
+            objLogin.Show();
+            this.Hide();
+        }
     }
 }

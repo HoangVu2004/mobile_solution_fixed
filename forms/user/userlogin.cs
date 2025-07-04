@@ -35,7 +35,9 @@ namespace SHOPPE
 
         private void lnkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            forgotpassword objLogin = new forgotpassword();
+            objLogin.Show();
+            this.Hide();
         }
 
         private void lnkAdminlogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
