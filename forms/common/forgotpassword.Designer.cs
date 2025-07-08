@@ -40,18 +40,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 36);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.Size = new System.Drawing.Size(124, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 98);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(36, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 20);
+            this.label2.Size = new System.Drawing.Size(55, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Hint";
             // 
@@ -65,20 +67,23 @@
             // 
             // btnGetPassword
             // 
-            this.btnGetPassword.Location = new System.Drawing.Point(140, 168);
+            this.btnGetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetPassword.Location = new System.Drawing.Point(195, 216);
             this.btnGetPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGetPassword.Name = "btnGetPassword";
-            this.btnGetPassword.Size = new System.Drawing.Size(84, 29);
+            this.btnGetPassword.Size = new System.Drawing.Size(116, 52);
             this.btnGetPassword.TabIndex = 3;
             this.btnGetPassword.Text = "Submit";
             this.btnGetPassword.UseVisualStyleBackColor = true;
+            this.btnGetPassword.Click += new System.EventHandler(this.btnGetPassword_Click);
             // 
             // lnkLoginPage
             // 
             this.lnkLoginPage.AutoSize = true;
-            this.lnkLoginPage.Location = new System.Drawing.Point(312, 272);
+            this.lnkLoginPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkLoginPage.Location = new System.Drawing.Point(320, 318);
             this.lnkLoginPage.Name = "lnkLoginPage";
-            this.lnkLoginPage.Size = new System.Drawing.Size(89, 20);
+            this.lnkLoginPage.Size = new System.Drawing.Size(111, 25);
             this.lnkLoginPage.TabIndex = 4;
             this.lnkLoginPage.TabStop = true;
             this.lnkLoginPage.Text = "Login Page";
@@ -86,25 +91,27 @@
             // 
             // txtFPUsername
             // 
-            this.txtFPUsername.Location = new System.Drawing.Point(150, 36);
+            this.txtFPUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFPUsername.Location = new System.Drawing.Point(171, 53);
             this.txtFPUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFPUsername.Name = "txtFPUsername";
-            this.txtFPUsername.Size = new System.Drawing.Size(148, 26);
+            this.txtFPUsername.Size = new System.Drawing.Size(173, 30);
             this.txtFPUsername.TabIndex = 5;
             // 
             // txtHintAnswer
             // 
-            this.txtHintAnswer.Location = new System.Drawing.Point(150, 94);
+            this.txtHintAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHintAnswer.Location = new System.Drawing.Point(171, 128);
             this.txtHintAnswer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHintAnswer.Name = "txtHintAnswer";
-            this.txtHintAnswer.Size = new System.Drawing.Size(148, 26);
+            this.txtHintAnswer.Size = new System.Drawing.Size(173, 30);
             this.txtHintAnswer.TabIndex = 6;
             // 
             // forgotpassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 396);
+            this.ClientSize = new System.Drawing.Size(467, 446);
             this.Controls.Add(this.txtHintAnswer);
             this.Controls.Add(this.txtFPUsername);
             this.Controls.Add(this.lnkLoginPage);

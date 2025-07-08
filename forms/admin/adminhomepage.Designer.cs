@@ -80,24 +80,15 @@
             this.btnViewReportDay = new System.Windows.Forms.Button();
             this.lblSelectDate = new System.Windows.Forms.Label();
             this.dgvSalesReportDay = new System.Windows.Forms.DataGridView();
-            this.colSlsId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colModelNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIMEINO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.subtabDateToDate = new System.Windows.Forms.TabPage();
+            this.lblTotalAmountDateToDate = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
             this.lblFrom = new System.Windows.Forms.Label();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.btnViewReportDateToDate = new System.Windows.Forms.Button();
             this.dgvSalesReportDateToDate = new System.Windows.Forms.DataGridView();
-            this.colSlsIdDateToDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCompanyDateToDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colModelNumDateToDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIMEINODateToDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPriceDateToDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabEmployee = new System.Windows.Forms.TabPage();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.lblHint = new System.Windows.Forms.Label();
@@ -115,7 +106,6 @@
             this.txtMobile = new System.Windows.Forms.TextBox();
             this.txtEmpName = new System.Windows.Forms.TextBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.lblTotalAmountDateToDate = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.tabctrlAdminHome.SuspendLayout();
             this.tabAdd.SuspendLayout();
@@ -538,6 +528,7 @@
             this.cmbCompanyStock.Name = "cmbCompanyStock";
             this.cmbCompanyStock.Size = new System.Drawing.Size(153, 33);
             this.cmbCompanyStock.TabIndex = 4;
+            this.cmbCompanyStock.SelectedIndexChanged += new System.EventHandler(this.cmbCompanyStock_SelectedIndexChanged);
             // 
             // txtAmount
             // 
@@ -637,53 +628,12 @@
             // dgvSalesReportDay
             // 
             this.dgvSalesReportDay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSalesReportDay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colSlsId,
-            this.colCompanyName,
-            this.colModelNum,
-            this.colIMEINO,
-            this.colPrice});
             this.dgvSalesReportDay.Location = new System.Drawing.Point(8, 89);
             this.dgvSalesReportDay.Name = "dgvSalesReportDay";
             this.dgvSalesReportDay.RowHeadersWidth = 62;
             this.dgvSalesReportDay.RowTemplate.Height = 28;
             this.dgvSalesReportDay.Size = new System.Drawing.Size(916, 150);
             this.dgvSalesReportDay.TabIndex = 1;
-            // 
-            // colSlsId
-            // 
-            this.colSlsId.HeaderText = "SlsId";
-            this.colSlsId.MinimumWidth = 8;
-            this.colSlsId.Name = "colSlsId";
-            this.colSlsId.Width = 150;
-            // 
-            // colCompanyName
-            // 
-            this.colCompanyName.HeaderText = "CompanyName";
-            this.colCompanyName.MinimumWidth = 8;
-            this.colCompanyName.Name = "colCompanyName";
-            this.colCompanyName.Width = 150;
-            // 
-            // colModelNum
-            // 
-            this.colModelNum.HeaderText = "ModelNum";
-            this.colModelNum.MinimumWidth = 8;
-            this.colModelNum.Name = "colModelNum";
-            this.colModelNum.Width = 150;
-            // 
-            // colIMEINO
-            // 
-            this.colIMEINO.HeaderText = "IMEINO";
-            this.colIMEINO.MinimumWidth = 8;
-            this.colIMEINO.Name = "colIMEINO";
-            this.colIMEINO.Width = 150;
-            // 
-            // colPrice
-            // 
-            this.colPrice.HeaderText = "Price";
-            this.colPrice.MinimumWidth = 8;
-            this.colPrice.Name = "colPrice";
-            this.colPrice.Width = 150;
             // 
             // dtpDate
             // 
@@ -712,21 +662,31 @@
             this.subtabDateToDate.Text = "Date to Date";
             this.subtabDateToDate.UseVisualStyleBackColor = true;
             // 
+            // lblTotalAmountDateToDate
+            // 
+            this.lblTotalAmountDateToDate.AutoSize = true;
+            this.lblTotalAmountDateToDate.Location = new System.Drawing.Point(273, 308);
+            this.lblTotalAmountDateToDate.Name = "lblTotalAmountDateToDate";
+            this.lblTotalAmountDateToDate.Size = new System.Drawing.Size(0, 20);
+            this.lblTotalAmountDateToDate.TabIndex = 8;
+            // 
             // lblTo
             // 
             this.lblTo.AutoSize = true;
+            this.lblTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTo.Location = new System.Drawing.Point(165, 57);
             this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(98, 20);
+            this.lblTo.Size = new System.Drawing.Size(119, 25);
             this.lblTo.TabIndex = 7;
             this.lblTo.Text = "Ending Date";
             // 
             // lblFrom
             // 
             this.lblFrom.AutoSize = true;
+            this.lblFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFrom.Location = new System.Drawing.Point(165, 14);
             this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(104, 20);
+            this.lblFrom.Size = new System.Drawing.Size(125, 25);
             this.lblFrom.TabIndex = 6;
             this.lblFrom.Text = "Starting Date";
             // 
@@ -737,6 +697,7 @@
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(200, 26);
             this.dtpTo.TabIndex = 5;
+            this.dtpTo.ValueChanged += new System.EventHandler(this.btnViewReportDateToDate_Click);
             // 
             // dtpFrom
             // 
@@ -748,9 +709,10 @@
             // 
             // btnViewReportDateToDate
             // 
+            this.btnViewReportDateToDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewReportDateToDate.Location = new System.Drawing.Point(650, 17);
             this.btnViewReportDateToDate.Name = "btnViewReportDateToDate";
-            this.btnViewReportDateToDate.Size = new System.Drawing.Size(119, 45);
+            this.btnViewReportDateToDate.Size = new System.Drawing.Size(127, 49);
             this.btnViewReportDateToDate.TabIndex = 3;
             this.btnViewReportDateToDate.Text = "Search";
             this.btnViewReportDateToDate.UseVisualStyleBackColor = true;
@@ -759,53 +721,12 @@
             // dgvSalesReportDateToDate
             // 
             this.dgvSalesReportDateToDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSalesReportDateToDate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colSlsIdDateToDate,
-            this.colCompanyDateToDate,
-            this.colModelNumDateToDate,
-            this.colIMEINODateToDate,
-            this.colPriceDateToDate});
             this.dgvSalesReportDateToDate.Location = new System.Drawing.Point(8, 90);
             this.dgvSalesReportDateToDate.Name = "dgvSalesReportDateToDate";
             this.dgvSalesReportDateToDate.RowHeadersWidth = 62;
             this.dgvSalesReportDateToDate.RowTemplate.Height = 28;
             this.dgvSalesReportDateToDate.Size = new System.Drawing.Size(916, 150);
             this.dgvSalesReportDateToDate.TabIndex = 2;
-            // 
-            // colSlsIdDateToDate
-            // 
-            this.colSlsIdDateToDate.HeaderText = "SlsId";
-            this.colSlsIdDateToDate.MinimumWidth = 8;
-            this.colSlsIdDateToDate.Name = "colSlsIdDateToDate";
-            this.colSlsIdDateToDate.Width = 150;
-            // 
-            // colCompanyDateToDate
-            // 
-            this.colCompanyDateToDate.HeaderText = "CompanyName";
-            this.colCompanyDateToDate.MinimumWidth = 8;
-            this.colCompanyDateToDate.Name = "colCompanyDateToDate";
-            this.colCompanyDateToDate.Width = 150;
-            // 
-            // colModelNumDateToDate
-            // 
-            this.colModelNumDateToDate.HeaderText = "ModelNum";
-            this.colModelNumDateToDate.MinimumWidth = 8;
-            this.colModelNumDateToDate.Name = "colModelNumDateToDate";
-            this.colModelNumDateToDate.Width = 150;
-            // 
-            // colIMEINODateToDate
-            // 
-            this.colIMEINODateToDate.HeaderText = "IMEINO";
-            this.colIMEINODateToDate.MinimumWidth = 8;
-            this.colIMEINODateToDate.Name = "colIMEINODateToDate";
-            this.colIMEINODateToDate.Width = 150;
-            // 
-            // colPriceDateToDate
-            // 
-            this.colPriceDateToDate.HeaderText = "Price";
-            this.colPriceDateToDate.MinimumWidth = 8;
-            this.colPriceDateToDate.Name = "colPriceDateToDate";
-            this.colPriceDateToDate.Width = 150;
             // 
             // tabEmployee
             // 
@@ -834,9 +755,10 @@
             // 
             // btnAddEmployee
             // 
-            this.btnAddEmployee.Location = new System.Drawing.Point(226, 469);
+            this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.Location = new System.Drawing.Point(228, 484);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(155, 46);
+            this.btnAddEmployee.Size = new System.Drawing.Size(155, 55);
             this.btnAddEmployee.TabIndex = 14;
             this.btnAddEmployee.Text = "ADD";
             this.btnAddEmployee.UseVisualStyleBackColor = true;
@@ -963,14 +885,6 @@
             this.txtEmpName.Size = new System.Drawing.Size(139, 26);
             this.txtEmpName.TabIndex = 0;
             // 
-            // lblTotalAmountDateToDate
-            // 
-            this.lblTotalAmountDateToDate.AutoSize = true;
-            this.lblTotalAmountDateToDate.Location = new System.Drawing.Point(273, 308);
-            this.lblTotalAmountDateToDate.Name = "lblTotalAmountDateToDate";
-            this.lblTotalAmountDateToDate.Size = new System.Drawing.Size(0, 20);
-            this.lblTotalAmountDateToDate.TabIndex = 8;
-            // 
             // frmAdminHomepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -981,6 +895,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmAdminHomepage";
             this.Text = "Admin Homepage";
+            this.Load += new System.EventHandler(this.frmAdminHomepage_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabctrlAdminHome.ResumeLayout(false);
             this.tabAdd.ResumeLayout(false);
@@ -1079,11 +994,6 @@
         private System.Windows.Forms.DataGridView dgvSalesReportDay;
         private System.Windows.Forms.Label lblSelectDate;
         private System.Windows.Forms.Button btnViewReportDay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSlsId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCompanyName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colModelNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIMEINO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
         private System.Windows.Forms.Label lblTotalAmountDay;
         private System.Windows.Forms.Button btnViewReportDateToDate;
         private System.Windows.Forms.DataGridView dgvSalesReportDateToDate;
@@ -1091,11 +1001,6 @@
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.DateTimePicker dtpTo;
         private System.Windows.Forms.DateTimePicker dtpFrom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSlsIdDateToDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCompanyDateToDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colModelNumDateToDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIMEINODateToDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPriceDateToDate;
         private System.Windows.Forms.DateTimePicker dtpWarranty;
         private System.Windows.Forms.Label lblTotalAmountDateToDate;
     }

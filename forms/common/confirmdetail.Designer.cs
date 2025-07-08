@@ -37,197 +37,230 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.lblCustName = new System.Windows.Forms.Label();
+            this.lblMobile = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCompany = new System.Windows.Forms.Label();
+            this.lblModel = new System.Windows.Forms.Label();
+            this.lblIMEI = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblWarranty = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 35);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(40, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
+            this.label1.Size = new System.Drawing.Size(164, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Customer name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 81);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(48, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 16);
+            this.label2.Size = new System.Drawing.Size(154, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mobile number";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 185);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(110, 237);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
+            this.label3.Size = new System.Drawing.Size(82, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Emailid";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 139);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(110, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.Size = new System.Drawing.Size(92, 25);
             this.label4.TabIndex = 2;
             this.label4.Text = "Address";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(350, 182);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(485, 237);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 16);
+            this.label5.Size = new System.Drawing.Size(61, 25);
             this.label5.TabIndex = 7;
             this.label5.Text = "Price";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(350, 139);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(490, 168);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 16);
+            this.label6.Size = new System.Drawing.Size(56, 25);
             this.label6.TabIndex = 6;
             this.label6.Text = "IMEI";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(350, 81);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(394, 101);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 16);
+            this.label7.Size = new System.Drawing.Size(152, 25);
             this.label7.TabIndex = 5;
             this.label7.Text = "Model Number";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(350, 35);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(380, 43);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 16);
+            this.label8.Size = new System.Drawing.Size(166, 25);
             this.label8.TabIndex = 4;
             this.label8.Text = "Company Name";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(350, 234);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(446, 299);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 16);
+            this.label9.Size = new System.Drawing.Size(100, 25);
             this.label9.TabIndex = 8;
             this.label9.Text = "Warranty";
             // 
-            // textBox1
+            // btnOK
             // 
-            this.textBox1.Location = new System.Drawing.Point(511, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 9;
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Location = new System.Drawing.Point(399, 384);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(113, 47);
+            this.btnOK.TabIndex = 18;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // textBox2
+            // btnCancel
             // 
-            this.textBox2.Location = new System.Drawing.Point(511, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 10;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(163, 384);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(109, 47);
+            this.btnCancel.TabIndex = 19;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // textBox3
+            // lblCustName
             // 
-            this.textBox3.Location = new System.Drawing.Point(160, 135);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 12;
+            this.lblCustName.AutoSize = true;
+            this.lblCustName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustName.Location = new System.Drawing.Point(212, 44);
+            this.lblCustName.Name = "lblCustName";
+            this.lblCustName.Size = new System.Drawing.Size(0, 25);
+            this.lblCustName.TabIndex = 20;
             // 
-            // textBox4
+            // lblMobile
             // 
-            this.textBox4.Location = new System.Drawing.Point(511, 127);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 11;
+            this.lblMobile.AutoSize = true;
+            this.lblMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMobile.Location = new System.Drawing.Point(212, 110);
+            this.lblMobile.Name = "lblMobile";
+            this.lblMobile.Size = new System.Drawing.Size(0, 25);
+            this.lblMobile.TabIndex = 21;
             // 
-            // textBox5
+            // lblAddress
             // 
-            this.textBox5.Location = new System.Drawing.Point(160, 81);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 14;
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(210, 172);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(0, 25);
+            this.lblAddress.TabIndex = 22;
             // 
-            // textBox6
+            // lblEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(160, 28);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 13;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(210, 237);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(0, 25);
+            this.lblEmail.TabIndex = 23;
             // 
-            // textBox7
+            // lblCompany
             // 
-            this.textBox7.Location = new System.Drawing.Point(160, 179);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 15;
+            this.lblCompany.AutoSize = true;
+            this.lblCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompany.Location = new System.Drawing.Point(568, 44);
+            this.lblCompany.Name = "lblCompany";
+            this.lblCompany.Size = new System.Drawing.Size(0, 25);
+            this.lblCompany.TabIndex = 24;
             // 
-            // textBox8
+            // lblModel
             // 
-            this.textBox8.Location = new System.Drawing.Point(511, 228);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 17;
+            this.lblModel.AutoSize = true;
+            this.lblModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModel.Location = new System.Drawing.Point(568, 101);
+            this.lblModel.Name = "lblModel";
+            this.lblModel.Size = new System.Drawing.Size(0, 25);
+            this.lblModel.TabIndex = 25;
             // 
-            // textBox9
+            // lblIMEI
             // 
-            this.textBox9.Location = new System.Drawing.Point(511, 176);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 16;
+            this.lblIMEI.AutoSize = true;
+            this.lblIMEI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIMEI.Location = new System.Drawing.Point(568, 172);
+            this.lblIMEI.Name = "lblIMEI";
+            this.lblIMEI.Size = new System.Drawing.Size(0, 25);
+            this.lblIMEI.TabIndex = 26;
             // 
-            // button1
+            // lblPrice
             // 
-            this.button1.Location = new System.Drawing.Point(336, 282);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(568, 237);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(0, 25);
+            this.lblPrice.TabIndex = 27;
             // 
-            // button2
+            // lblWarranty
             // 
-            this.button2.Location = new System.Drawing.Point(143, 282);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.lblWarranty.AutoSize = true;
+            this.lblWarranty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarranty.Location = new System.Drawing.Point(568, 299);
+            this.lblWarranty.Name = "lblWarranty";
+            this.lblWarranty.Size = new System.Drawing.Size(0, 25);
+            this.lblWarranty.TabIndex = 28;
             // 
             // confirmdetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 316);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(768, 465);
+            this.Controls.Add(this.lblWarranty);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.lblIMEI);
+            this.Controls.Add(this.lblModel);
+            this.Controls.Add(this.lblCompany);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblAddress);
+            this.Controls.Add(this.lblMobile);
+            this.Controls.Add(this.lblCustName);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -237,6 +270,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "confirmdetail";
             this.Text = "confirmdetail";
             this.ResumeLayout(false);
@@ -255,16 +289,16 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblCustName;
+        private System.Windows.Forms.Label lblMobile;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblCompany;
+        private System.Windows.Forms.Label lblModel;
+        private System.Windows.Forms.Label lblIMEI;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblWarranty;
     }
 }
