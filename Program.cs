@@ -17,7 +17,7 @@ namespace SHOPPE
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Member());
-            Application.Run(new forgotpassword());
+            Application.Run(new userlogin());
         }
     }
 }
